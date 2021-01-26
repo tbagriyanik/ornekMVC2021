@@ -13,17 +13,17 @@ namespace ornekMVC2021.Controllers
             return View();
         }
 
-        [Authorize(Roles = "musteri,yonetici")]
+        //[Authorize(Roles = "musteri,yonetici")]
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Hakkında";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "İletişim";
 
             return View();
         }
