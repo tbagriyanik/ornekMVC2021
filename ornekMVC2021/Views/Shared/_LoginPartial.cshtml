@@ -5,17 +5,22 @@
     {
     @Html.AntiForgeryToken()
 
-    <ul class="nav navbar-nav navbar-right">
-        <li>Merhaba @Html.ActionLink(User.Identity.GetUserName() + ", ", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+   
+
+<ul class="nav navbar-nav navbar-right">
+    <li>Merhaba @Html.ActionLink(User.Identity.GetUserName() + ", ", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
         </li>
-        <li>&nbsp;<a href="javascript:document.getElementById('logoutForm').submit()">Çıkış</a></li>
-    </ul>
+    <li>&nbsp;<a href="javascript:document.getElementById('logoutForm').submit()">Çıkış</a></li>
+</ul>
 }
 }
 else
 {
-    <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink("Kayıt Ol", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" }) &nbsp;</li>
-        <li>@Html.ActionLink("Giriş", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-    </ul>
+   
+<ul class="nav navbar-nav navbar-right">
+
+    <li class="nav-item btn  mr-3">@Html.ActionLink("Kayıt Ol", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" }) &nbsp;</li>
+
+    <li class="nav-item btn">@Html.ActionLink("Giriş", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+</ul>
 }

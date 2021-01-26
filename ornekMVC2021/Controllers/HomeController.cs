@@ -27,5 +27,13 @@ namespace ornekMVC2021.Controllers
 
             return View();
         }
+
+        [Authorize(Roles = "yonetici")]
+        public ActionResult Yonet()
+        {
+            ViewBag.Message = "Yönetim";
+
+            return View();
+        }
     }
 }
